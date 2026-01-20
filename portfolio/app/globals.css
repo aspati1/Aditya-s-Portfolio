@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global adjustments */
+section {
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --ring: 0 0% 0%;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  ::selection {
+    @apply bg-blue-200 text-slate-900 dark:bg-blue-800/40 dark:text-slate-50;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-accent text-white px-5 py-2 rounded-md font-medium shadow-soft hover:shadow-md hover:bg-blue-700 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 border border-accent text-accent px-5 py-2 rounded-md font-medium hover:bg-accent hover:text-white transition;
+}
