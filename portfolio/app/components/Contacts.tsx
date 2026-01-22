@@ -23,7 +23,7 @@ const Contact = () => {
         viewport={{ once: true }}
         className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl"
       >
-        Want to connect for internships, collaborations, or business opportunities? Feel free to reach out!
+        Feel free to reach out!
       </motion.p>
 
       <motion.div
