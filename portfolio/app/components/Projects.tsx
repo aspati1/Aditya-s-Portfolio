@@ -7,11 +7,8 @@ import { useState } from "react";
 /* ---------------- BikeWithMe Data ---------------- */
 
 const screenshots = [
-/public/bikewithme-1.png,
-/public/bikewithme-2.png,
-/public/bikewithme-3.png,
-/public/bikewithme-4.png,
-/public/bikewithme-5.png,  
+/portfolio/public/bikewithme-1.png.png 
+/portfoli/public/bikewithme-2.png
 ];
 
 const techStack = [
