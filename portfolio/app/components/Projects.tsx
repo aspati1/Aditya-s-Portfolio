@@ -11,6 +11,7 @@ const screenshots = [
   "/projects/bikewithme-2.png",
   "/projects/bikewithme-3.png",
   "/projects/bikewithme-4.png",
+  "/projects/bikewithme-5.png",
 ];
 
 const techStack = [
