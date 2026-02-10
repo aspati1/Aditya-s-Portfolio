@@ -196,7 +196,7 @@ const Projects = () => {
               Live Demo →
             </a>
             <a
-              href="https://github.com/your-repo-link"
+              href="https://github.com/aspati1/Aditya-s-Portfolio.git"
               target="_blank"
               className="text-sm font-medium text-slate-500 hover:text-accent"
             >
