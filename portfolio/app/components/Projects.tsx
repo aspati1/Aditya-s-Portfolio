@@ -7,8 +7,8 @@ import { useState } from "react";
 /* ---------------- BikeWithMe Data ---------------- */
 
 const screenshots = [
-  /public/bikewithme-1.png.png,
-  /public/bikewithme-2.png.png,
+  /public/bikewithme-1.png,
+  /public/bikewithme-2.png,
   /public/bikewithme-3.png.png,
   /public/bikewithme-4.png.png,
   /public/bikewithme-5.png.png,
