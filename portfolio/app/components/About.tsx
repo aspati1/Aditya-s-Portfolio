@@ -1,39 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import SectionHeading from './SectionHeading';
 
 const About = () => {
   return (
-    <section id="about" className="container px-6 py-24">
-      <motion.h2
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-        className="relative text-3xl font-bold text-darkBlue dark:text-white mb-6 tracking-tight after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-12 after:rounded-full after:bg-accent"
-      >
-        About Me
-      </motion.h2>
+    <section id="about" className="py-20">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <SectionHeading
+          eyebrow="About"
+          title="Engineering mindset with product ownership"
+          description="I focus on shipping scalable products that are technically strong and visually polished."
+        />
 
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4 }}
-        viewport={{ once: true }}
-        className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl"
-      >
-        I'm Aditya Vairale, a versatile professional based in Pune, Maharashtra, currently serving as a Technical Recruiter at Aptino Technologies. With a unique career trajectory spanning technical recruitment, financial analysis, and business intelligence, I bring a multifaceted perspective to talent acquisition and organizational growth. My background in finance and analytics, combined with my current role in IT recruitment, enables me to understand both the technical requirements of roles and the strategic business implications of talent decisions.
-      </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
-        viewport={{ once: true }}
-        className="text-slate-600 dark:text-slate-300 leading-relaxed mt-4 max-w-3xl"
-      >
-        My educational foundation includes a PGDM in Finance & Analytics (CGPA: 6.52) and a B.Sc (Hons.) in Agriculture (CGPA: 8.37), providing me with strong analytical capabilities and domain knowledge in agribusiness. My professional journey includes diverse roles: currently managing end-to-end IT recruitment for US clients at Aptino Technologies (W2, C2C, 1099 models), previously driving finance course enrollments at Upgrad Edutech, conducting investment analysis at Gramdev Tech, and optimizing recruitment strategies at FirstCry.com. I leverage technical skills in SAP FICO, SQL, Python, Power BI, and Tableau to deliver data-driven insights across all functions.
-      </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.45 }}
+          className="grid gap-6 md:grid-cols-2"
+        >
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Professional summary</h3>
+            <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-300">
+              Full-stack developer with a strong React and Node.js foundation, delivering production-ready web applications with clean code practices and measurable performance improvements.
+              I work across UI architecture, APIs, and data layers while maintaining quality through reusable components, semantic markup, and responsive design.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Experience focus</h3>
+            <ul className="mt-4 space-y-3 text-slate-600 dark:text-slate-300">
+              <li><strong>3+ years</strong> in analytics, recruiting, and digital product workflows.</li>
+              <li><strong>Frontend:</strong> React ecosystems, responsive systems, motion design.</li>
+              <li><strong>Backend:</strong> Node APIs, structured data models, integration readiness.</li>
+              <li><strong>Quality:</strong> performance budgets, maintainability, recruiter-first structure.</li>
+            </ul>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };
