@@ -1,91 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 const Contact = () => {
   return (
-    <section id="contact" className="container px-6 py-24">
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-        className="relative text-3xl font-bold text-darkBlue dark:text-white mb-6 tracking-tight 
-        after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-12 after:rounded-full after:bg-accent"
-      >
-        Contact
-      </motion.h2>
+    <section id="contact" className="py-20">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <SectionHeading
+          eyebrow="Contact"
+          title="Let’s build something impactful"
+          description="Open to full-time opportunities and high-quality product collaborations."
+        />
 
-      {/* Subtitle */}
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4 }}
-        viewport={{ once: true }}
-        className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl"
-      >
-        Feel free to reach out!
-      </motion.p>
+        <div className="grid gap-6 md:grid-cols-2">
+          <motion.form
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="space-y-4 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+          >
+            <input type="text" placeholder="Your name" className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-800" />
+            <input type="email" placeholder="Your email" className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-800" />
+            <textarea rows={5} placeholder="Project details" className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-800" />
+            <button type="submit" className="rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400">
+              Send Message
+            </button>
+          </motion.form>
 
-      {/* Contact Info */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-3xl"
-      >
-        {/* Email */}
-        <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-          <Mail className="text-accent" size={20} />
-          <div>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-            <a
-              href="mailto:aditya.vairale2015@gmail.com"
-              className="hover:text-accent transition-colors"
-            >
-              aditya.vairale2015@gmail.com
-            </a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.06, duration: 0.4 }}
+            className="rounded-3xl border border-slate-200 bg-gradient-to-br from-indigo-50 to-sky-50 p-8 shadow-sm dark:border-slate-800 dark:from-slate-900 dark:to-slate-900"
+          >
+            <p className="text-sm text-slate-600 dark:text-slate-300">Prefer direct contact?</p>
+            <a href="mailto:aditya.vairale2015@gmail.com" className="mt-2 block text-lg font-semibold text-slate-900 hover:text-indigo-600 dark:text-white">aditya.vairale2015@gmail.com</a>
+            <div className="mt-6 flex items-center gap-3">
+              <a className="rounded-xl border border-slate-300 p-3 transition hover:-translate-y-0.5 hover:border-indigo-400 dark:border-slate-700" href="https://github.com/aspati1" target="_blank" rel="noreferrer"><Github size={18} /></a>
+              <a className="rounded-xl border border-slate-300 p-3 transition hover:-translate-y-0.5 hover:border-indigo-400 dark:border-slate-700" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={18} /></a>
+              <a className="rounded-xl border border-slate-300 p-3 transition hover:-translate-y-0.5 hover:border-indigo-400 dark:border-slate-700" href="mailto:aditya.vairale2015@gmail.com"><Mail size={18} /></a>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Phone */}
-        <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-          <Phone className="text-accent" size={20} />
-          <div>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
-            <a
-              href="tel:+917030698212"
-              className="hover:text-accent transition-colors"
-            >
-              +91-7030698212
-            </a>
-          </div>
-        </div>
-
-        {/* Location */}
-        <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-          <MapPin className="text-accent" size={20} />
-          <div>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Location</p>
-            <p>Pune, Maharashtra</p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* CTA Button */}
-      <motion.a
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.4 }}
-        viewport={{ once: true }}
-        href="mailto:aditya.vairale2015@gmail.com"
-        className="btn-primary inline-flex items-center gap-2"
-      >
-        <Mail size={18} /> Send Email
-      </motion.a>
+      </div>
     </section>
   );
 };

@@ -1,57 +1,44 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { motion } from 'framer-motion';
+import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-24">
-      {/* Background glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl dark:bg-blue-500/10"
-      />
-      <div className="container px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-accent dark:from-white dark:to-blue-400"
-        >
-          I’m Aditya.
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-xl text-slate-600 dark:text-slate-300 mt-3"
-        >
-          Technical Recruiter | Business Analyst | Finance & Analytics Professional
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-slate-600 dark:text-slate-300/90 mt-4 max-w-2xl"
-        >
-          Results-driven professional with expertise spanning technical recruitment, financial analysis, and business intelligence. Currently excelling in IT talent acquisition for US clients while maintaining strong competencies in investment analysis, risk assessment, and financial modeling. Passionate about leveraging analytical skills to drive strategic decision-making and organizational growth.
-        </motion.p>
+    <section id="hero" className="relative overflow-hidden pt-32">
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.22),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(56,189,248,0.20),transparent_30%),linear-gradient(to_bottom,#f8fafc,#f8fafc)] dark:bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.26),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(56,189,248,0.18),transparent_35%),linear-gradient(to_bottom,#020617,#020617)]" />
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-24 md:grid-cols-[1.1fr_0.9fr] md:px-8">
+        <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-indigo-600 dark:text-indigo-300">Available for full-time opportunities</p>
+          <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-white md:text-6xl">
+            Full Stack Developer <span className="text-indigo-600 dark:text-indigo-300">| React & Node Specialist</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-slate-300">
+            I build performant, scalable web products with clean architecture, intuitive UX, and production-ready engineering standards.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#projects" className="inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400">
+              View Projects <ArrowRight size={16} />
+            </a>
+            <a href="/Aditya Vairale Resume 4.pdf" download className="inline-flex items-center gap-2 rounded-2xl border border-slate-300 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-indigo-400 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100">
+              Download Resume <Download size={16} />
+            </a>
+          </div>
+        </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="flex flex-wrap gap-4 mt-8"
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="rounded-3xl border border-white/40 bg-white/60 p-8 shadow-xl backdrop-blur dark:border-slate-700/60 dark:bg-slate-900/50"
         >
-          <a href="/Aditya Vairale Resume 4.pdf" download className="btn-primary">
-            <Download size={18} /> Download Resume
-          </a>
-
-          <a href="mailto:aditya.vairale2015@gmail.com" className="btn-secondary">
-            <Mail size={18} /> Contact Me
-          </a>
+          <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Core focus</p>
+          <ul className="mt-4 space-y-4 text-sm text-slate-700 dark:text-slate-200">
+            <li>• End-to-end product development (frontend to backend)</li>
+            <li>• API architecture, data modeling, and system reliability</li>
+            <li>• Performance-first implementation with responsive design</li>
+            <li>• Recruiter-friendly communication, documentation, and execution</li>
+          </ul>
         </motion.div>
       </div>
     </section>
