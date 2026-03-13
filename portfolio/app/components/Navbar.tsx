@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll } from 'framer-motion';
-import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+import { Linkedin, Mail, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { navItems } from '../data';
@@ -27,8 +27,7 @@ const Navbar = () => {
 
           <div className="hidden items-center gap-3 md:flex">
             <a href="mailto:aditya.vairale2015@gmail.com" aria-label="Email"><Mail size={18} /></a>
-            <a href="https://github.com/aspati1" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+            <a href="https://www.linkedin.com/in/aditya-vairale2609/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             <ThemeToggle />
           </div>
 
