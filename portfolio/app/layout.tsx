@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-  title: 'Aditya Vairale | Full Stack Developer',
+  title: 'Aditya Vairale | Product, Analytics & Tech Portfolio',
   description:
-    'Modern full-stack developer portfolio featuring production-ready React and Node.js projects, experience, and contact details.',
+    'Portfolio of Aditya Vairale highlighting AI-assisted product development, business analysis, finance analytics, and web technology projects.',
 };
 
 export default function RootLayout({

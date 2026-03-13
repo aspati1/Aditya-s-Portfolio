@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,8 +7,7 @@ const Footer = () => {
         <p>© {new Date().getFullYear()} Aditya Vairale. All rights reserved.</p>
         <div className="flex items-center gap-3">
           <a href="mailto:aditya.vairale2015@gmail.com" aria-label="Email"><Mail size={17} /></a>
-          <a href="https://github.com/aspati1" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17} /></a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a>
+          <a href="https://www.linkedin.com/in/aditya-vairale2609/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a>
         </div>
       </div>
     </footer>
